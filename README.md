@@ -44,7 +44,7 @@ Versioned datasets and resumable evaluation jobs, tested by killing real worker 
 
 Pinned model scoring, evidence receipts, a loading study, and a prediction-drift explorer. Local and CPU-first; no cluster-scale claims.
 
-[Inspect the evidence →](https://github.com/eluxsana/RunLedger/blob/main/docs/EXPERIMENTS.md)<br>
+[Open the evidence desk →](https://eluxsana.github.io/RunLedger/)<br>
 [Code](https://github.com/eluxsana/RunLedger) · [Design decisions](https://github.com/eluxsana/RunLedger/blob/main/docs/ARCHITECTURE.md)
 
 </td>
