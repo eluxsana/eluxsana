@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://eluxsana.github.io/shortcut-lab/">Open the lab</a> &nbsp; / &nbsp;
+  <a href="https://eluxsana.github.io/recall-lab/">Open the lab</a> &nbsp; / &nbsp;
   <a href="https://github.com/eluxsana/RunLedger/blob/main/docs/EXPERIMENTS.md">Read the experiments</a> &nbsp; / &nbsp;
   <a href="https://www.linkedin.com/in/eluxsana">Say hello</a>
 </p>
@@ -16,22 +16,22 @@ The questions I keep coming back to are fairly concrete: did the model learn wha
 
 Python and PyTorch are my usual starting point. Spark, Ray, SQL, and Parquet come in when the data or the job gets bigger.
 
-### Two ways to question a result
+### Things I’m building
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-#### 01 · Shortcut Lab
+#### 01 · Recall Lab
 
-**A good score, for the wrong reason.**
+**A tiny transformer, opened up.**
 
-Train a small classifier, then change the correlation it relied on. Compare the overall score with the examples where the shortcut fails.
+Train from random weights, follow a head's attention, and change the value the model has to retrieve.
 
-Three training controls, 63 held-out evaluations, numerical gradient checks, and an interactive report. Synthetic data; standard-library Python.
+69,832 parameters. Three training seeds. Real checkpoints, input interventions, and a longer-context stress test. Synthetic recall, not language understanding.
 
-[Move the distribution →](https://eluxsana.github.io/shortcut-lab/)<br>
-[Code](https://github.com/eluxsana/shortcut-lab) · [Methods & limits](https://github.com/eluxsana/shortcut-lab/blob/main/METHODS.md)
+[Open the attention explorer →](https://eluxsana.github.io/recall-lab/)<br>
+[Code](https://github.com/eluxsana/recall-lab) · [Methods & limits](https://github.com/eluxsana/recall-lab/blob/main/METHODS.md)
 
 </td>
 <td width="50%" valign="top">
@@ -50,6 +50,8 @@ Pinned model scoring, evidence receipts, a loading study, and a prediction-drift
 </td>
 </tr>
 </table>
+
+Also in the notebook: **[Shortcut Lab](https://eluxsana.github.io/shortcut-lab/)** — a small, interactive experiment in distribution shift, with three training controls and no Python dependencies.
 
 ### A note from the experiments
 
