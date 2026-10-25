@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="440" viewBox="0 0 1440 440" role="img" aria-labelledby="title desc">
+<title id="title">Eluxsana Subenderan — Machine Learning Engineer</title>
+<desc id="desc">A dark orbital interface with cyan and violet trajectories. Model training, evaluation, and reproducible systems.</desc>
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#070d1c"/><stop offset="1" stop-color="#14102b"/></linearGradient>
+  <linearGradient id="orbit"><stop stop-color="#67e8f9"/><stop offset="1" stop-color="#b69aff"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#7255ce" stop-opacity=".3"/><stop offset="1" stop-color="#7255ce" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#8da3d4" stroke-opacity=".065"/></pattern>
+</defs>
+<rect width="1440" height="440" rx="20" fill="url(#bg)"/>
+<rect width="1440" height="440" rx="20" fill="url(#grid)"/>
+<circle cx="1120" cy="218" r="250" fill="url(#halo)"/>
+<g fill="#c0d5f6" opacity=".55"><circle cx="950" cy="66" r="1.5"/><circle cx="1320" cy="118" r="2"/><circle cx="1005" cy="360" r="1"/><circle cx="1283" cy="365" r="1.5"/><circle cx="893" cy="269" r="1"/><circle cx="1220" cy="51" r="1"/></g>
+<g transform="translate(1130 220)" fill="none" stroke="url(#orbit)">
+  <circle r="126" stroke-opacity=".3"/><ellipse rx="126" ry="47" stroke-opacity=".36"/><ellipse rx="126" ry="90" stroke-opacity=".2"/>
+  <ellipse rx="47" ry="126" transform="rotate(24)" stroke-opacity=".5"/><ellipse rx="87" ry="126" transform="rotate(24)" stroke-opacity=".23"/>
+  <ellipse rx="192" ry="55" transform="rotate(-27)" stroke-width="1.8"/>
+  <ellipse rx="170" ry="64" transform="rotate(46)" stroke-opacity=".35"/>
+  <circle r="6" fill="#a5f3fc" stroke="none"/>
+</g>
+<circle cx="1285" cy="143" r="6" fill="#8cecf7"/><circle cx="1020" cy="117" r="4" fill="#b69aff"/>
+<path d="M54 56H82M54 56V84M1386 356V384H1358" fill="none" stroke="#67e8f9" stroke-width="2"/>
+<text x="78" y="99" fill="#77e7f5" font-family="monospace" font-size="15" letter-spacing="3">ELUXSANA / ML ENGINEERING</text>
+<text x="74" y="181" fill="#f2f5ff" font-family="Arial,Helvetica,sans-serif" font-size="60" font-weight="700" letter-spacing="-2">Curious about the model.</text>
+<text x="74" y="249" fill="#c3b4fa" font-family="Arial,Helvetica,sans-serif" font-size="60" font-weight="700" letter-spacing="-2">Careful about the evidence.</text>
+<text x="78" y="299" fill="#a9b6d1" font-family="Arial,Helvetica,sans-serif" font-size="20">Statistics → model training → evaluation → reproducible systems</text>
+<g font-family="monospace" font-size="13" letter-spacing="1">
+  <rect x="78" y="337" width="171" height="35" rx="6" fill="#0f2430" stroke="#254555"/><text x="96" y="360" fill="#92e4ef">WATERLOO / STATS</text>
+  <rect x="261" y="337" width="161" height="35" rx="6" fill="#1b1936" stroke="#3f355a"/><text x="279" y="360" fill="#c8b8ff">PYTORCH + PYTHON</text>
+  <text x="453" y="360" fill="#8393b2">BUILD · MEASURE · REPEAT</text>
+</g>
+</svg>
