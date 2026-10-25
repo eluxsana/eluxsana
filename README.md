@@ -1,23 +1,39 @@
-# Hi, I'm Eluxsana
+<p align="center">
+  <img src="assets/orbit-header.svg" alt="Eluxsana Subenderan. Curious about the model. Careful about the evidence." width="100%" />
+</p>
 
-I'm a machine learning engineer with a statistics background from the University of Waterloo. I work on model training, evaluation, and the tools that make experiments easier to run and understand.
+<p align="center">
+  <a href="https://github.com/eluxsana/RunLedger">Explore RunLedger</a> &nbsp; / &nbsp;
+  <a href="https://github.com/eluxsana/RunLedger/blob/main/docs/EXPERIMENTS.md">Read the experiments</a> &nbsp; / &nbsp;
+  <a href="https://www.linkedin.com/in/eluxsana">Say hello</a>
+</p>
 
-I'm especially interested in the gap between an experiment that works once and one that someone else can reproduce.
+### Hi, I'm Eluxsana.
 
-## What I'm building
+I'm a machine learning engineer with a statistics background from Waterloo. I work across model training, evaluation, and the systems around them. I like the part where an experiment turns into something another person can run, inspect, and trust.
 
-### [RunLedger](https://github.com/eluxsana/RunLedger)
+Python and PyTorch are my main tools. Spark, Ray, SQL, and Parquet show up when the data or the training job gets bigger.
 
-A small, CPU-first project for resumable LLM evaluation. The question behind it: if a worker dies halfway through saving results, can the run recover without changing its predictions or scores?
+---
 
-It brings together versioned Parquet datasets, a SQLite job ledger, a pinned Hugging Face model, and inspectable evaluation reports. The repo includes crash-recovery experiments, a 128-question ARC-Easy diagnostic, and the limitations behind the results.
+### 01 / RunLedger
 
-[Read the code](https://github.com/eluxsana/RunLedger) · [Experiments](https://github.com/eluxsana/RunLedger/blob/main/docs/EXPERIMENTS.md) · [Design decisions](https://github.com/eluxsana/RunLedger/blob/main/docs/ARCHITECTURE.md)
+**An evaluation worker dies halfway through saving results. What can you still trust?**
 
-## A little more about me
+That's the question behind my small, CPU-first evaluation project. RunLedger combines versioned datasets, resumable jobs, pinned model configurations, and evidence reports you can inspect. I care about the failure cases as much as the final accuracy number.
 
-- I like working across the model and systems sides of ML.
-- Python and PyTorch are my main tools; I also work with Spark, Ray, SQL, and Parquet.
-- My older repositories include university and early learning projects. They show where I started; RunLedger is a better place to see my current interests.
+- **Break it:** kill a worker at three commit boundaries and check the recovered predictions.
+- **Trace it:** follow a result back to its dataset, model revision, and scoring configuration.
+- **Measure it:** inspect the 128-question ARC-Easy diagnostic and the raw loading-study results.
 
-[LinkedIn](https://www.linkedin.com/in/eluxsana)
+[Code](https://github.com/eluxsana/RunLedger) · [Experiments & limitations](https://github.com/eluxsana/RunLedger/blob/main/docs/EXPERIMENTS.md) · [Design decisions](https://github.com/eluxsana/RunLedger/blob/main/docs/ARCHITECTURE.md)
+
+### 02 / Questions I want to work on
+
+What changes between two model versions, beyond the headline score? Which evaluation failures come from the model, and which come from the pipeline? How much infrastructure is enough to make a small experiment reliable?
+
+I'm exploring these through RunLedger and contributions to tools I use. I'll link upstream work here once there's something concrete to read.
+
+---
+
+<sub>Older repositories include university and early learning projects. This page is where I keep my current work and the questions behind it.</sub>
