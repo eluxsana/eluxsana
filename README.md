@@ -25,6 +25,7 @@ That's the question behind my small, CPU-first evaluation project. RunLedger com
 - **Break it:** kill a worker at three commit boundaries and check the recovered predictions.
 - **Trace it:** follow a result back to its dataset, model revision, and scoring configuration.
 - **Measure it:** inspect the 128-question ARC-Easy diagnostic and the raw loading-study results.
+- **Compare it:** explore prediction drift, including answer flips that the headline score hides.
 
 [Code](https://github.com/eluxsana/RunLedger) · [Experiments & limitations](https://github.com/eluxsana/RunLedger/blob/main/docs/EXPERIMENTS.md) · [Design decisions](https://github.com/eluxsana/RunLedger/blob/main/docs/ARCHITECTURE.md)
 
@@ -32,7 +33,13 @@ That's the question behind my small, CPU-first evaluation project. RunLedger com
 
 What changes between two model versions, beyond the headline score? Which evaluation failures come from the model, and which come from the pipeline? How much infrastructure is enough to make a small experiment reliable?
 
-I'm exploring these through RunLedger and contributions to tools I use. I'll link upstream work here once there's something concrete to read.
+I'm exploring these through RunLedger and contributions to tools I use.
+
+### 03 / In the open
+
+[Hugging Face Hub: cache lookup verification](https://github.com/huggingface/huggingface_hub/pull/5243#issuecomment-6401982920)
+
+I tested an existing contributor's fix with extra offline cases for string and Path cache directories, branch refs, and missing-file markers. Shared the results upstream. This is verification work on an open PR, not a merged code contribution.
 
 ---
 
