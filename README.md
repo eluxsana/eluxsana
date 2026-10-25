@@ -1,46 +1,77 @@
 <p align="center">
-  <img src="assets/orbit-header.svg" alt="Eluxsana Subenderan. Curious about the model. Careful about the evidence." width="100%" />
+  <img src="lab-header.svg" alt="Eluxsana. Statistics, systems, and the models in between. Actual accuracy curves from Shortcut Lab, a synthetic experiment." width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/eluxsana/RunLedger">Explore RunLedger</a> &nbsp; / &nbsp;
+  <a href="https://eluxsana.github.io/shortcut-lab/">Open the lab</a> &nbsp; / &nbsp;
   <a href="https://github.com/eluxsana/RunLedger/blob/main/docs/EXPERIMENTS.md">Read the experiments</a> &nbsp; / &nbsp;
   <a href="https://www.linkedin.com/in/eluxsana">Say hello</a>
 </p>
 
 ### Hi, I'm Eluxsana.
 
-I'm a machine learning engineer with a statistics background from Waterloo. I work across model training, evaluation, and the systems around them. I like the part where an experiment turns into something another person can run, inspect, and trust.
+Machine learning engineer. Statistics at Waterloo. I work on training, evaluation, and the systems that connect them.
 
-Python and PyTorch are my main tools. Spark, Ray, SQL, and Parquet show up when the data or the training job gets bigger.
+The questions I keep coming back to are fairly concrete: did the model learn what we hoped it learned? Can someone else reproduce the result? What happens when the job dies halfway through?
+
+Python and PyTorch are my usual starting point. Spark, Ray, SQL, and Parquet come in when the data or the job gets bigger.
+
+### Two ways to question a result
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 01 · Shortcut Lab
+
+**A good score, for the wrong reason.**
+
+Train a small classifier, then change the correlation it relied on. Compare the overall score with the examples where the shortcut fails.
+
+Three training controls, 63 held-out evaluations, numerical gradient checks, and an interactive report. Synthetic data; standard-library Python.
+
+[Move the distribution →](https://eluxsana.github.io/shortcut-lab/)<br>
+[Code](https://github.com/eluxsana/shortcut-lab) · [Methods & limits](https://github.com/eluxsana/shortcut-lab/blob/main/METHODS.md)
+
+</td>
+<td width="50%" valign="top">
+
+#### 02 · RunLedger
+
+**A worker dies. Which results survive?**
+
+Versioned datasets and resumable evaluation jobs, tested by killing real worker processes at transaction boundaries.
+
+Pinned model scoring, evidence receipts, a loading study, and a prediction-drift explorer. Local and CPU-first; no cluster-scale claims.
+
+[Inspect the evidence →](https://github.com/eluxsana/RunLedger/blob/main/docs/EXPERIMENTS.md)<br>
+[Code](https://github.com/eluxsana/RunLedger) · [Design decisions](https://github.com/eluxsana/RunLedger/blob/main/docs/ARCHITECTURE.md)
+
+</td>
+</tr>
+</table>
+
+### A note from the experiments
+
+In Shortcut Lab, **95.4% overall accuracy hides 34.0% on the conflicting group**. Changing the test distribution drops the same model to 31.3%. The little chart above is drawn from those measurements.
+
+The example is intentionally small. I want the assumptions, code, and failure to fit in the same conversation. [What the experiment cannot tell us →](https://github.com/eluxsana/shortcut-lab/blob/main/METHODS.md)
+
+### In the open
+
+[Hugging Face Hub · cache lookup verification](https://github.com/huggingface/huggingface_hub/pull/5243#issuecomment-6401982920)
+
+Tested an existing contributor's fix with extra offline cases for string and Path cache directories, branch refs, and missing-file markers. Shared the results upstream. Verification on an open PR; not a merged code contribution.
+
+<details>
+<summary>A few things I'm exploring next</summary>
+
+- How much a result changes across training seeds, not just test examples.
+- Which answer flips an aggregate evaluation score hides.
+- Small contributions to the tools I actually use, with reproducible cases.
+
+</details>
 
 ---
 
-### 01 / RunLedger
-
-**An evaluation worker dies halfway through saving results. What can you still trust?**
-
-That's the question behind my small, CPU-first evaluation project. RunLedger combines versioned datasets, resumable jobs, pinned model configurations, and evidence reports you can inspect. I care about the failure cases as much as the final accuracy number.
-
-- **Break it:** kill a worker at three commit boundaries and check the recovered predictions.
-- **Trace it:** follow a result back to its dataset, model revision, and scoring configuration.
-- **Measure it:** inspect the 128-question ARC-Easy diagnostic and the raw loading-study results.
-- **Compare it:** explore prediction drift, including answer flips that the headline score hides.
-
-[Code](https://github.com/eluxsana/RunLedger) · [Experiments & limitations](https://github.com/eluxsana/RunLedger/blob/main/docs/EXPERIMENTS.md) · [Design decisions](https://github.com/eluxsana/RunLedger/blob/main/docs/ARCHITECTURE.md)
-
-### 02 / Questions I want to work on
-
-What changes between two model versions, beyond the headline score? Which evaluation failures come from the model, and which come from the pipeline? How much infrastructure is enough to make a small experiment reliable?
-
-I'm exploring these through RunLedger and contributions to tools I use.
-
-### 03 / In the open
-
-[Hugging Face Hub: cache lookup verification](https://github.com/huggingface/huggingface_hub/pull/5243#issuecomment-6401982920)
-
-I tested an existing contributor's fix with extra offline cases for string and Path cache directories, branch refs, and missing-file markers. Shared the results upstream. This is verification work on an open PR, not a merged code contribution.
-
----
-
-<sub>Older repositories include university and early learning projects. This page is where I keep my current work and the questions behind it.</sub>
+<sub>Older repositories include university and early learning projects. Current projects document AI assistance, measurements, and limitations alongside the code.</sub>
